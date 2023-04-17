@@ -11,9 +11,19 @@
 
 ### Install dependencies
 
-`composer require`
+`composer install`
+
 `yarn install`
 
 ### Create DB
 
 `bin/console do:da:cr`
+
+`bin/console doctrine:schema:update --force`
+
+### Run Dev Server
+
+`symfony serve`
+
+
+`yarn watch`
