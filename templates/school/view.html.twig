@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <div>
+        <h1>{{ school.name }}</h1>
+
+        {% if school.members|length > 0 %}
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+
+                <tbody>
+                    {% for member in school.members %}
+                        <tr>
+                            <td>
+                                {{  member.name }}
+                            </td>
+                            <td>
+                                {{ member.email }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        {% endif %}
+            <a href="{{ path('app_member_create') }}">
+               Create new member
+            </a>
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+* {
+    margin:0;
+    box-sizing: border-box;
+}
+
+.home {
+    padding: 2rem;
+}
+
+h1,h2 {
+    margin-bottom: 1rem;
+}
+
+a {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+p {
+    margin-bottom: .5rem;
+}

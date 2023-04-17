@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="home">
+        <h1>Schools Demo</h1>
+
+        <div>
+            <h2>View Schools</h2>
+            {% if schools|length > 0 %}
+                {% for school in schools %}
+                <a href="{{ path('app_school_view', { id: school.id }) }}">{{ school.name }}</a>
+                {% endfor %}
+            <p>Or</p>
+            {% endif %}
+            <a href="{{ path('app_school_create') }}"><p>Create new school</p></a>
+        </div>
+
+        {% if schools|length > 0 %}
+        <div>
+            <h2>Member</h2>
+            <a href="{{ path('app_member_create') }}">Create new Member</a>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}
